@@ -76,5 +76,7 @@ def completed(request, slug):
     context = {
         "correct": correct,
         "total": questions.count(),
+        "questions": questions,
+        "saved_answers": saved_answers,
     }
     return render(request, "quiz/completed.html", context)
